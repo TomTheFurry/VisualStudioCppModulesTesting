@@ -7,30 +7,30 @@ import :I;
 import std.core;
 
 export int MyFunc();
-export constexpr bool TRUES = false;
-export class Exp {
+export constexpr bool constexprTest = true;
+export class ExposedClass {
 public:
 	int g;
 	int getExInts();
 	void setInts(auto, auto);
 	void setEnum(En);
-	OldClass getOld();
-	OldTempClass<int> getOldTemp();
+	OldClass getOldClass();
+	OldTemplateClass<int> getPredefinedOldTemplateClass();
 	template<class T>
-	OldTempClass<T> passOldTemp();
+	OldTemplateClass<T> getOldTemplateClass();
 	BX getBX();
 	Ex* _ex;
 	std::vector<int> getVect();
 private:
 	void _setX(int, int);
 };
-void Exp::setInts(auto i, auto j) {
+void ExposedClass::setInts(auto i, auto j) {
 	_setX(i, j);
 }
 
 template<class T>
-OldTempClass<T> Exp::passOldTemp()
+OldTemplateClass<T> ExposedClass::getOldTemplateClass()
 {
-	GlobalInt++;
-	return OldTempClass<T>();
+	oldGlobalVar++;
+	return OldTemplateClass<T>();
 }

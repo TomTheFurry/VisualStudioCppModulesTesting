@@ -3,7 +3,7 @@
 module Module;
 import :I;
 
-void Exp::setEnum(En e) {
+void ExposedClass::setEnum(En e) {
 	switch (e)
 	{
 	case En::e5:
@@ -29,12 +29,12 @@ void Exp::setEnum(En e) {
 	}
 }
 
-OldClass Exp::getOld()
+OldClass ExposedClass::getOldClass()
 {
 	return OldClass();
 }
 
-OldTempClass<int> Exp::getOldTemp()
+OldTemplateClass<int> ExposedClass::getPredefinedOldTemplateClass()
 {
-	return OldTempClass<int>();
+	return OldTemplateClass<int>();
 }

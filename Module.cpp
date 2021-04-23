@@ -15,21 +15,21 @@ int MyFunc() {
 }
 int Ex::getP() { return 1; }
 
-int Exp::getExInts() {
+int ExposedClass::getExInts() {
 	if (!_ex) _ex = new Ex{};
 	return _ex->getInts();
 }
-BX Exp::getBX()
+BX ExposedClass::getBX()
 {
 	return BX{getExInts()};
 }
 
-std::vector<int> Exp::getVect()
+std::vector<int> ExposedClass::getVect()
 {
 	return std::vector<int>();
 }
 
-void Exp::_setX(int i, int j)
+void ExposedClass::_setX(int i, int j)
 {
 	if (!_ex) _ex = new Ex{};
 	_ex->setInt(X{ BX{i},BX{j} });

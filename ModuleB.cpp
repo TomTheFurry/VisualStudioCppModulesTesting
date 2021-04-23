@@ -1,6 +1,6 @@
 module ModuleB;
 import Module;
 BX getDefault() {
-	Exp exp{};
+	ExposedClass exp{};
 	return BX{ exp.getExInts() };
 }

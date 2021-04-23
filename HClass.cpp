@@ -1,24 +1,25 @@
 #include "HClass.h"
 #include <iostream>
 
-int OldClass::qrs = 5;
-int OldClassTwo::ubq = 7;
+int OldClass::referencedClassStatic = 5;
+int IndirectReferencedClass::nonReferencedStatic = 7;
 
 
-void OldClass::doStuff()
+void OldClass::referencedClassNonReferencedFunction()
 {
-	qrs++;
+	referencedClassStatic++;
 	std::cout << "Good\n";
 }
 
-OldClassTwo* OldClass::doSomeStuff()
+IndirectReferencedClass* OldClass::makeIndirectRefencedClass()
 {
-	return new OldClassTwo();
+	return new IndirectReferencedClass();
 }
 
-extern int GlobalInt = 5;
+extern int oldGlobalVar = 5;
+extern int oldGlobalNonReferencedVar = 6;
 
-void OldClassTwo::doOldStuff()
+void IndirectReferencedClass::nonReferencedFunction()
 {
-	ubq++;
+	nonReferencedStatic++;
 }

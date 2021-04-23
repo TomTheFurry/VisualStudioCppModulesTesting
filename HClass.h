@@ -1,24 +1,31 @@
 #pragma once
-extern int GlobalInt;
-class OldClassTwo {
+extern int oldGlobalVar;
+extern int oldGlobalNonReferencedVar;
+class IndirectReferencedClass {
 public:
-	static int ubq;
-	void doOldStuff();
+	static int nonReferencedStatic;
+	void nonReferencedFunction();
+	void nonReferencedTemplateFunction(auto p);
 };
 
 class OldClass {
 public:
-	static int qrs;
-	void doStuff();
-	OldClassTwo* doSomeStuff();
+	static int referencedClassStatic;
+	void referencedClassNonReferencedFunction();
+	IndirectReferencedClass* makeIndirectRefencedClass();
 };
-template <class T> class OldTempClass {
+template <class T> class OldTemplateClass {
 public:
-	void doStuff(T);
+	void nonReferencedFunction(T);
 };
 
 template<class T>
-inline void OldTempClass<T>::doStuff(T)
+inline void OldTemplateClass<T>::nonReferencedFunction(T)
+{
+	return;
+}
+
+void IndirectReferencedClass::nonReferencedTemplateFunction(auto)
 {
 	return;
 }

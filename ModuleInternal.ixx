@@ -1,14 +1,11 @@
 
 export module Module:I;
-//export import ModuleB;
+export import ModuleB;
 
 class Ex;
 struct X;
 class P;
 export int MyFunc();
-export struct BX {
-	int i;
-};
 export struct X {
 	BX i = { 1 };
 	BX j = { 3 };
