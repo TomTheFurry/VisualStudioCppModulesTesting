@@ -18,9 +18,11 @@ public:
 	OldTemplateClass<int> getPredefinedOldTemplateClass();
 	template<class T>
 	OldTemplateClass<T> getOldTemplateClass();
+	void checkUseTemplateClass(auto);
 	BX getBX();
 	Ex* _ex;
 	std::vector<int> getVect();
+	void callOldGlobalFunctionInline(auto);
 private:
 	void _setX(int, int);
 };
@@ -33,4 +35,12 @@ OldTemplateClass<T> ExposedClass::getOldTemplateClass()
 {
 	oldGlobalVar++;
 	return OldTemplateClass<T>();
+}
+void ExposedClass::callOldGlobalFunctionInline(auto i) {
+	referencedGlobalFunction();
+	referencedGlobalTemplateFunction(i);
+}
+
+void ExposedClass::checkUseTemplateClass(auto) {
+	OldClassInTemplate oct{};
 }

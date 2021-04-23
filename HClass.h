@@ -18,6 +18,17 @@ template <class T> class OldTemplateClass {
 public:
 	void nonReferencedFunction(T);
 };
+class OldClassInTemplate {
+public:
+	void templateReferencedClassNonReferencedFunction();
+};
+
+class NonReferencedClass {
+public:
+	static int nonReferencedStatic;
+	void Func();
+	void TemplateFunc(auto);
+};
 
 template<class T>
 inline void OldTemplateClass<T>::nonReferencedFunction(T)
@@ -29,3 +40,13 @@ void IndirectReferencedClass::nonReferencedTemplateFunction(auto)
 {
 	return;
 }
+
+void NonReferencedClass::TemplateFunc(auto)
+{
+	return;
+}
+
+void referencedGlobalFunction();
+void nonReferencedGlobalFunction();
+void referencedGlobalTemplateFunction(auto) {}
+void nonReferencedGlobalTemplateFunction(auto) {}

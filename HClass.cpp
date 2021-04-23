@@ -23,3 +23,19 @@ void IndirectReferencedClass::nonReferencedFunction()
 {
 	nonReferencedStatic++;
 }
+
+void NonReferencedClass::Func()
+{
+}
+
+void referencedGlobalFunction()
+{
+}
+
+void nonReferencedGlobalFunction()
+{
+}
+
+void OldClassInTemplate::templateReferencedClassNonReferencedFunction()
+{
+}
