@@ -21,13 +21,13 @@
     <ClCompile Include="Source.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ModuleInternal.ixx">
+    <ClCompile Include="ModuleI.ixx">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Module.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ModuleT.ixx">
+    <ClCompile Include="ModuleB.ixx">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ModuleI.cpp">
@@ -40,6 +40,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="HClass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleT.ixx">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

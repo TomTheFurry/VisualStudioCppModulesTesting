@@ -155,8 +155,9 @@
     <ClCompile Include="ModuleB.cpp" />
     <ClCompile Include="ModuleE.ixx" />
     <ClCompile Include="ModuleI.cpp" />
-    <ClCompile Include="ModuleInternal.ixx" />
+    <ClCompile Include="ModuleI.ixx" />
     <ClCompile Include="Module.ixx" />
+    <ClCompile Include="ModuleB.ixx" />
     <ClCompile Include="ModuleT.ixx" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>

@@ -3,6 +3,7 @@ module;
 
 export module Module;
 export import :E;
+export import :T;
 import :I;
 import std.core;
 
