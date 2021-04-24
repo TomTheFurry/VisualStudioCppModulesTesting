@@ -3,6 +3,7 @@ import Module;
 
 
 int main() {
+	indirectTemplate(12);
 
 	ExposedClass epc{};
 	auto oldClass = epc.getOldClass();

@@ -167,6 +167,7 @@
   <ItemGroup>
     <ClInclude Include="DefineEnum.h" />
     <ClInclude Include="HClass.h" />
+    <ClInclude Include="IncludeStd.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

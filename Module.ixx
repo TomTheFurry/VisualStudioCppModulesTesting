@@ -3,7 +3,7 @@ module;
 
 export module Module;
 export import :E;
-export import :T;
+import :T;
 import :I;
 import std.core;
 
@@ -31,12 +31,6 @@ void ExposedClass::setInts(auto i, auto j) {
 	_setX(i, j);
 }
 
-template<class T>
-OldTemplateClass<T> ExposedClass::getOldTemplateClass()
-{
-	oldGlobalVar++;
-	return OldTemplateClass<T>();
-}
 void ExposedClass::callOldGlobalFunctionInline(auto i) {
 	referencedGlobalFunction();
 	referencedGlobalTemplateFunction(i);
@@ -44,4 +38,15 @@ void ExposedClass::callOldGlobalFunctionInline(auto i) {
 
 void ExposedClass::checkUseTemplateClass(auto) {
 	OldClassInTemplate oct{};
+}
+export template<class T>
+OldTemplateClass<T> ExposedClass::getOldTemplateClass()
+{
+	oldGlobalVar++;
+	return OldTemplateClass<T>();
+}
+
+export void indirectTemplate(auto);
+void indirectTemplate(auto t) {
+	_iTemplate(t);
 }

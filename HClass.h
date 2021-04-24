@@ -1,4 +1,6 @@
 #pragma once
+#include <string>
+
 extern int oldGlobalVar;
 extern int oldGlobalNonReferencedVar;
 class IndirectReferencedClass {
@@ -28,6 +30,7 @@ public:
 	static int nonReferencedStatic;
 	void Func();
 	void TemplateFunc(auto);
+	std::string getString();
 };
 
 template<class T>

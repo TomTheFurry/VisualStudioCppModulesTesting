@@ -39,3 +39,5 @@ void nonReferencedGlobalFunction()
 void OldClassInTemplate::templateReferencedClassNonReferencedFunction()
 {
 }
+
+std::string NonReferencedClass::getString() { return std::string(); }

@@ -53,5 +53,8 @@
     <ClInclude Include="HClass.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="IncludeStd.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
